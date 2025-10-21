@@ -1,0 +1,103 @@
+﻿System bude rozdeleny na 3 casti
+
+
+crone - automaticke stahovani po urcitem case
+
+
+logování stahování dat, try catch chytí errory a zapíše je, ideálně do .txt
+
+
+nas skript ma limit 30 sekund, musi byt optimalizovan, aby to zvladl
+
+
+zalohovat, idealne na 2 mista
+
+
+
+
+
+
+
+
+1 cast bude pouze pro data - stazeni dat, prefiltrovani, ulozeni do databaze
+
+
+Jeden soubor pro stahovani tech dat a porovnani, zda je neco noveho se bude zjistovat pres HASH, pokud by bylo neco noveho tak to prave stahne
+
+
+Druhy soubor po uspesnem stazeni zapise do databaze
+
+
+Updatovani bude pomoci replace into
+
+
+
+
+2 cast bude “rizeni” - administrace
+
+
+3 cast bude samotne API
+
+
+
+
+
+
+
+
+jedna vec bude sdilena napric vsemi castmi - databaze (konfiguracni soubor)
+
+
+Samostatne verze API nebudou nic sdilet krome toho konfiguracniho souboru, vzdy budou mit vse vlastni
+
+
+Pri nove verzi API je nutne zachovat ty predesle a adresovat je treba jako /api/v1/…, /api/v2/…
+
+
+
+
+
+
+
+
+Na konci zari bude kontrola, zda soubor dokaze ukladat data do databaze, dulezite je take logovat, co se deje
+
+
+
+
+
+
+
+
+
+
+Admin
+
+
+Udělat do 22.10. admin rozhraní
+
+
+
+
+Jako první verzi stačí mít zobrazování toho:
+
+
+- kolik je v databázi dat (nezobrazovat samotná data, pouze to kolik jich tam je)
+
+
+- kdy byla poslední aktualizace
+
+
+- výpis posledních logů (logy se budou dát filtrovat například podle dne nebo podle důležitosti)
+
+
+- v první verzi není nutná / nebude registrace / ověřování kvůli tomu, když to budu testovat, tak abych se nemusel pořád přihlašovat
+
+
+- admin rozhraní může být klidně template / nemusíme ho vytvářet sami
+
+
+- může tam být i nějaké tlačítko, které po kliknutí provede “manuální” aktualizaci (nebude se čekat až se to udělá samo, ale provede se to prostě hned)
+
+
+- nemusí tam být žádné grafy
